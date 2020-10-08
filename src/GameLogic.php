@@ -5,6 +5,7 @@ namespace Bowling;
 class GameLogic
 {
     private $frames;
+    private $executedRolls = 0;
 
     public function __construct(Array $frames)
     {
@@ -13,7 +14,11 @@ class GameLogic
 
     public function roll(int $fallenPins)
     {
+        if ($this->executedRolls === (count($this->frames) * 2)){
+            throw new GameException();
+        }
         $this->frames[0]->roll($fallenPins);
+        $this->executedRolls ++;
     }
 
     public function getScore() : int

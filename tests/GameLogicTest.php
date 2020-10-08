@@ -3,6 +3,7 @@
 namespace Bowling\Tests;
 
 use Bowling\FrameLogic;
+use Bowling\GameException;
 use Bowling\GameLogic;
 use PHPUnit\Framework\TestCase;
 
@@ -28,8 +29,7 @@ class GameTest extends TestCase
     public function should_return_score_2_after_roll()
     {
         $frameOne = new FrameLogic();
-        $frameTwo = new FrameLogic();
-        $gameLogic = new GameLogic([$frameOne, $frameTwo]);
+        $gameLogic = new GameLogic([$frameOne]);
         $gameLogic->roll(1);
         $gameLogic->roll(1);
 
@@ -44,29 +44,26 @@ class GameTest extends TestCase
     public function should_return_score_3_after_roll()
     {
         $frameOne = new FrameLogic();
-        $frameTwo = new FrameLogic();
-        $gameLogic = new GameLogic([$frameOne, $frameTwo]);
+        $gameLogic = new GameLogic([$frameOne]);
         $gameLogic->roll(1);
-        $gameLogic->roll(1);
+        $gameLogic->roll(2);
 
         $totalScore = $gameLogic->getScore();
 
-        $this->assertEquals($totalScore, 2);
+        $this->assertEquals($totalScore, 3);
     }
 
     /**
      * @test
+     * @throws GameException
      */
-    public function shouldDoSomething()
+    public function should_fail_if_all_frames_completed()
     {
+        $this->expectException(GameException::class);
         $frameOne = new FrameLogic();
-        $frameOne->roll(1);
-        $currentFrame = new FrameLogic();
-        $currentFrame->roll(2);
-        $gameLogic = new GameLogic([$frameOne, $currentFrame]);
-
-        $frame = $gameLogic->getCurrentFrame();
-
-        $this->assertEquals($frame->getScore(), $currentFrame->getScore());
+        $gameLogic = new GameLogic([$frameOne]);
+        $gameLogic->roll(1);
+        $gameLogic->roll(1);
+        $gameLogic->roll(1);
     }
 }
