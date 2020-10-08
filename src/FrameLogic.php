@@ -2,7 +2,7 @@
 
 namespace Bowling;
 
-class Frame
+class FrameLogic
 {
     private $rolls = [];
 

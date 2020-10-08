@@ -3,7 +3,7 @@
 namespace Bowling\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Bowling\Frame;
+use Bowling\FrameLogic;
 
 class FrameTest extends TestCase
 {
@@ -11,7 +11,7 @@ class FrameTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->frame = new Frame();
+        $this->frame = new FrameLogic();
     }
 
     /**

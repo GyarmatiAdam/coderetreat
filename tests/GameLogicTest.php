@@ -2,7 +2,7 @@
 
 namespace Bowling\Tests;
 
-use Bowling\Frame;
+use Bowling\FrameLogic;
 use Bowling\GameLogic;
 use PHPUnit\Framework\TestCase;
 
@@ -13,7 +13,7 @@ class GameTest extends TestCase
      */
     public function should_return_score_of_all_frames()
     {
-        $frame[] = new Frame();
+        $frame[] = new FrameLogic();
         $this->game = new GameLogic($frame);
         $this->game->roll(1);
 
@@ -27,8 +27,8 @@ class GameTest extends TestCase
      */
     public function should_return_score_2_after_roll()
     {
-        $frameOne = new Frame();
-        $frameTwo = new Frame();
+        $frameOne = new FrameLogic();
+        $frameTwo = new FrameLogic();
         $gameLogic = new GameLogic([$frameOne, $frameTwo]);
         $gameLogic->roll(1);
         $gameLogic->roll(1);
@@ -43,8 +43,8 @@ class GameTest extends TestCase
      */
     public function should_return_score_3_after_roll()
     {
-        $frameOne = new Frame();
-        $frameTwo = new Frame();
+        $frameOne = new FrameLogic();
+        $frameTwo = new FrameLogic();
         $gameLogic = new GameLogic([$frameOne, $frameTwo]);
         $gameLogic->roll(1);
         $gameLogic->roll(1);
@@ -59,9 +59,9 @@ class GameTest extends TestCase
      */
     public function shouldDoSomething()
     {
-        $frameOne = new Frame();
+        $frameOne = new FrameLogic();
         $frameOne->roll(1);
-        $currentFrame = new Frame();
+        $currentFrame = new FrameLogic();
         $currentFrame->roll(2);
         $gameLogic = new GameLogic([$frameOne, $currentFrame]);
 
