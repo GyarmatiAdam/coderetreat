@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteMappingsManager">
+    <list>
+      <list>
+        <remote-mappings server-id="php@7a886117-0959-4214-908f-baa0856e4cbc">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$" remote-root="/home/vagrant/workspace/codeRetreat" />
+            </list>
+          </settings>
+        </remote-mappings>
+        <remote-mappings server-id="php@30739fcf-96f0-4e60-95d3-f1b7df4d354d">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$" remote-root="/home/vagrant/workspace/codeRetreat" />
+            </list>
+          </settings>
+        </remote-mappings>
+      </list>
+    </list>
+  </component>
+</project>

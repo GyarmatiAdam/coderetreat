@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="127.0.0.1" id="54e2177d-62a3-4aa7-bbeb-6eb1927e65ee" port="2222" customName="retreat" nameFormat="CUSTOM" username="vagrant">
+        <option name="customName" value="retreat" />
+      </sshConfig>
+      <sshConfig authType="PASSWORD" host="127.0.0.1" id="91b0c8d4-8567-4ad9-8bb9-4c3c2c1bd688" port="2222" customName="retreat" nameFormat="CUSTOM">
+        <option name="customName" value="retreat" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+{
+    "name": "sportradar/code-retreat",
+    "require-dev": {
+        "phpunit/phpunit": "8.5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bowling\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bowling\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "ext-json": "*"
+    }
+}

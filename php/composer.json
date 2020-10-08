@@ -1,0 +1,16 @@
+{
+    "name": "code-retreat/ralph",
+    "description": "code retreat",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "7.*"
+    },
+    "autoload":  {
+        "psr-4" : {
+            "CodeRetreat\\" : "src/",
+            "CodeRetreatTests\\" : "tests/"
+        }
+    }
+}
